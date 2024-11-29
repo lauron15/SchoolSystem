@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:55866",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Users\\Laurim\\Desktop\\SystemSchool\\SystemSchool\\SystemSchool.Server\\..\\systemschool.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

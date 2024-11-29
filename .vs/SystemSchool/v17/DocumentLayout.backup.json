@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Laurim\\Desktop\\SystemSchool\\SystemSchool\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{60032804-2DCA-4AD1-B61E-D66F838D7B34}|SystemSchool.Server\\SystemSchool.Server.csproj|c:\\users\\laurim\\desktop\\systemschool\\systemschool\\systemschool.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60032804-2DCA-4AD1-B61E-D66F838D7B34}|SystemSchool.Server\\SystemSchool.Server.csproj|solutionrelative:systemschool.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60032804-2DCA-4AD1-B61E-D66F838D7B34}|SystemSchool.Server\\SystemSchool.Server.csproj|c:\\users\\laurim\\desktop\\systemschool\\systemschool\\systemschool.server\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60032804-2DCA-4AD1-B61E-D66F838D7B34}|SystemSchool.Server\\SystemSchool.Server.csproj|solutionrelative:systemschool.server\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60032804-2DCA-4AD1-B61E-D66F838D7B34}|SystemSchool.Server\\SystemSchool.Server.csproj|c:\\users\\laurim\\desktop\\systemschool\\systemschool\\systemschool.server\\models\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60032804-2DCA-4AD1-B61E-D66F838D7B34}|SystemSchool.Server\\SystemSchool.Server.csproj|solutionrelative:systemschool.server\\models\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60032804-2DCA-4AD1-B61E-D66F838D7B34}|SystemSchool.Server\\SystemSchool.Server.csproj|c:\\users\\laurim\\desktop\\systemschool\\systemschool\\systemschool.server\\models\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60032804-2DCA-4AD1-B61E-D66F838D7B34}|SystemSchool.Server\\SystemSchool.Server.csproj|solutionrelative:systemschool.server\\models\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60032804-2DCA-4AD1-B61E-D66F838D7B34}|SystemSchool.Server\\SystemSchool.Server.csproj|c:\\users\\laurim\\desktop\\systemschool\\systemschool\\systemschool.server\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60032804-2DCA-4AD1-B61E-D66F838D7B34}|SystemSchool.Server\\SystemSchool.Server.csproj|solutionrelative:systemschool.server\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60032804-2DCA-4AD1-B61E-D66F838D7B34}|SystemSchool.Server\\SystemSchool.Server.csproj|c:\\users\\laurim\\desktop\\systemschool\\systemschool\\systemschool.server\\models\\classes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60032804-2DCA-4AD1-B61E-D66F838D7B34}|SystemSchool.Server\\SystemSchool.Server.csproj|solutionrelative:systemschool.server\\models\\classes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\Laurim\\Desktop\\SystemSchool\\SystemSchool\\SystemSchool.Server\\Data\\ApplicationDBContext.cs",
+              "RelativeDocumentMoniker": "SystemSchool.Server\\Data\\ApplicationDBContext.cs",
+              "ToolTip": "C:\\Users\\Laurim\\Desktop\\SystemSchool\\SystemSchool\\SystemSchool.Server\\Data\\ApplicationDBContext.cs*",
+              "RelativeToolTip": "SystemSchool.Server\\Data\\ApplicationDBContext.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T19:37:15.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Courses.cs",
+              "DocumentMoniker": "C:\\Users\\Laurim\\Desktop\\SystemSchool\\SystemSchool\\SystemSchool.Server\\Models\\Courses.cs",
+              "RelativeDocumentMoniker": "SystemSchool.Server\\Models\\Courses.cs",
+              "ToolTip": "C:\\Users\\Laurim\\Desktop\\SystemSchool\\SystemSchool\\SystemSchool.Server\\Models\\Courses.cs",
+              "RelativeToolTip": "SystemSchool.Server\\Models\\Courses.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T19:17:47.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Students.cs",
+              "DocumentMoniker": "C:\\Users\\Laurim\\Desktop\\SystemSchool\\SystemSchool\\SystemSchool.Server\\Models\\Students.cs",
+              "RelativeDocumentMoniker": "SystemSchool.Server\\Models\\Students.cs",
+              "ToolTip": "C:\\Users\\Laurim\\Desktop\\SystemSchool\\SystemSchool\\SystemSchool.Server\\Models\\Students.cs",
+              "RelativeToolTip": "SystemSchool.Server\\Models\\Students.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T19:16:20.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Users.cs",
+              "DocumentMoniker": "C:\\Users\\Laurim\\Desktop\\SystemSchool\\SystemSchool\\SystemSchool.Server\\Models\\Users.cs",
+              "RelativeDocumentMoniker": "SystemSchool.Server\\Models\\Users.cs",
+              "ToolTip": "C:\\Users\\Laurim\\Desktop\\SystemSchool\\SystemSchool\\SystemSchool.Server\\Models\\Users.cs*",
+              "RelativeToolTip": "SystemSchool.Server\\Models\\Users.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T19:16:10.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Laurim\\Desktop\\SystemSchool\\SystemSchool\\SystemSchool.Server\\Program.cs",
+              "RelativeDocumentMoniker": "SystemSchool.Server\\Program.cs",
+              "ToolTip": "C:\\Users\\Laurim\\Desktop\\SystemSchool\\SystemSchool\\SystemSchool.Server\\Program.cs",
+              "RelativeToolTip": "SystemSchool.Server\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T18:34:33.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Classes.cs",
+              "DocumentMoniker": "C:\\Users\\Laurim\\Desktop\\SystemSchool\\SystemSchool\\SystemSchool.Server\\Models\\Classes.cs",
+              "RelativeDocumentMoniker": "SystemSchool.Server\\Models\\Classes.cs",
+              "ToolTip": "C:\\Users\\Laurim\\Desktop\\SystemSchool\\SystemSchool\\SystemSchool.Server\\Models\\Classes.cs",
+              "RelativeToolTip": "SystemSchool.Server\\Models\\Classes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T19:16:30.445Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

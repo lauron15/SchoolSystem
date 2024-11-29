@@ -1,0 +1,24 @@
+{
+  "Version": 1,
+  "Hash": "bnYujfo65A3ROo5ui0RnMlFiAak4fz/OJuayNmmwDi4=",
+  "Source": "SystemSchool.Server",
+  "BasePath": "_content/SystemSchool.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\Laurim\\Desktop\\SystemSchool\\SystemSchool\\systemschool.client\\systemschool.client.esproj",
+      "Version": 2,
+      "Source": "systemschool.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
