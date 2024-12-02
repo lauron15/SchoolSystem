@@ -8,8 +8,16 @@ namespace SystemSchool.Server.Models
     public class Students
     {
         [Key]
-        [Column("")]
+        [Column("id")]
         public int Id { get; set; }
 
+        [Column("class")]
+        public String? Name { get; set; }
+
+        [Column("email")]
+        public String? Email{ get; set; }
+
+        [Column("age")]
+        public String? Age { get; set; }
     }
 }
