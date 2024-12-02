@@ -16,8 +16,5 @@ namespace SystemSchool.Server.Models
         [Column("password")]
         public string? Password { get; set; }
 
-
-
-
     }
 }
