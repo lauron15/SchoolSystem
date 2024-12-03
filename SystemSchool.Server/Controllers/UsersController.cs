@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SystemSchool.Server.Data;
+using SystemSchool.Server.DTO.UsersDto;
+using SystemSchool.Server.Mappers;
 
 namespace SystemSchool.Server.Controllers
 {
@@ -18,7 +20,8 @@ namespace SystemSchool.Server.Controllers
         [HttpGet]
         public ActionResult GetAll()
         {
-            var users = _context.Users.ToList();
+            var users = _context.Users.ToList()
+                .Select(s => s.ToUsersDto());
             return Ok(users);
         }
 
@@ -31,7 +34,18 @@ namespace SystemSchool.Server.Controllers
                 return NotFound();
             }
 
-            return Ok(users);
+            return Ok(users.ToUsersDto());
+        }
+
+        [HttpPost]
+        public IActionResult Create([FromBody] CreateUsersRequestDto usersDto)
+        {
+            var usersModel = usersDto.ToUsersFromCreateDTO();
+            _context.Users.Add(usersModel);
+            _context.SaveChanges();
+  
+            return CreatedAtAction(nameof(GetById), new { id = usersModel.Id }, usersModel.ToUsersDto());
+
         }
     }
 }
