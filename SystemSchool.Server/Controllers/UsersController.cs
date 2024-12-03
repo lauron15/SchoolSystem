@@ -47,5 +47,37 @@ namespace SystemSchool.Server.Controllers
             return CreatedAtAction(nameof(GetById), new { id = usersModel.Id }, usersModel.ToUsersDto());
 
         }
+
+        [HttpPut("{id}")]
+        public IActionResult Update([FromRoute] int id, [FromBody] UpdateUsersDto updateDto)
+        {
+            var usersModel = _context.Users.FirstOrDefault(x => x.Id == id);
+
+            if (usersModel == null)
+            {
+                return NotFound();
+            }
+
+            usersModel.Username = updateDto.Username;
+            usersModel.Password = updateDto.Password;
+            return Ok(usersModel.ToUsersDto());
+
+        }
+
+        [HttpDelete("{id}")]
+
+        public IActionResult Delete ([FromRoute]int id)
+        {
+            var usersModel = _context.Users.FirstOrDefault(x => x.Id == id);
+            if(usersModel == null)
+            {
+                return NotFound();
+            }
+
+            _context.Users.Remove(usersModel);
+            _context.SaveChanges();
+            return NoContent();
+        }
+
     }
 }
