@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SystemSchool.Server.Data;
 using SystemSchool.Server.DTO.StudentsDto;
 using SystemSchool.Server.Mappers;
@@ -20,17 +21,17 @@ namespace SystemSchool.Server.Controllers
         }
 
         [HttpGet]
-        public ActionResult GetAll()
+        public async Task<ActionResult> GetAll()
         {
-            var students = _context.Students.ToList()
-                .Select(s => s.ToStudentsDto());
+            var students = await _context.Students.ToArrayAsync();
+             var studentsDto = students.Select(s => s.ToStudentsDto());
             return Ok(students);
         }
 
         [HttpGet("{id}")]
-        public ActionResult GetById([FromRoute] int id)
+        public async Task<ActionResult> GetById([FromRoute] int id)
         {
-            var students = _context.Students.Find(id);
+            var students = await _context.Students.FindAsync(id);
             if(students == null)
             {
                 return NotFound();
@@ -40,20 +41,20 @@ namespace SystemSchool.Server.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody] CreateStudentsRequestDto studentsDto)
+        public async Task<IActionResult> Create([FromBody] CreateStudentsRequestDto studentsDto)
         {
             var studentsModel = studentsDto.ToStudentsFromCreateDTO();
-            _context.Students.Add(studentsModel);
-            _context.SaveChanges();
+            await _context.Students.AddAsync(studentsModel);
+            await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetById), new { id = studentsModel.Id }, studentsModel.ToStudentsDto());
 
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update([FromRoute] int id, [FromBody] UpdateStudentsDto updateDto)
+        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateStudentsDto updateDto)
         {
-            var studentsModel = _context.Students.FirstOrDefault(x => x.Id == id);
+            var studentsModel = await _context.Students.FirstOrDefaultAsync(x => x.Id == id);
             if(studentsModel == null)
             {
                 return NotFound();
@@ -62,21 +63,22 @@ namespace SystemSchool.Server.Controllers
             studentsModel.Name = updateDto.Name;
             studentsModel.Email = updateDto.Email;
             studentsModel.Age = updateDto.Age;
+            await _context.SaveChangesAsync();
             return Ok(studentsModel.ToStudentsDto());
 
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete([FromRoute] int id)
+        public async Task<IActionResult> Delete([FromRoute] int id)
         {
-            var studentsModel = _context.Students.FirstOrDefault(x => x.Id == id);
+            var studentsModel = await _context.Students.FirstOrDefaultAsync(x => x.Id == id);
             if(studentsModel == null)
             {
                 return NotFound();
             }
 
             _context.Students.Remove(studentsModel);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return NoContent();
         }
 

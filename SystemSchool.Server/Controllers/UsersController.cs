@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SystemSchool.Server.Data;
 using SystemSchool.Server.DTO.UsersDto;
+using SystemSchool.Server.Interfaces;
 using SystemSchool.Server.Mappers;
 
 namespace SystemSchool.Server.Controllers
@@ -12,23 +14,26 @@ namespace SystemSchool.Server.Controllers
     public class UsersController : ControllerBase
     {
         private readonly ApplicationDBContext _context;
-        public UsersController(ApplicationDBContext context)
+        private readonly IUsersRepository _usersRepo;
+       
+        public UsersController(ApplicationDBContext context, IUsersRepository usersRepo)
         {
+            _usersRepo = usersRepo;
             _context = context;
         }
 
         [HttpGet]
-        public ActionResult GetAll()
+        public async Task<ActionResult> GetAll()
         {
-            var users = _context.Users.ToList()
-                .Select(s => s.ToUsersDto());
+            var users = await _usersRepo.GetAllAsync();
+            var usersModel= users.Select(s => s.ToUsersDto());
             return Ok(users);
         }
 
         [HttpGet("{id}")]
-        public ActionResult GetById([FromRoute] int id)
+        public async Task<ActionResult> GetById([FromRoute] int id)
         {
-            var users = _context.Users.Find(id);
+            var users = await _context.Users.FindAsync(id);
             if (users == null)
             {
                 return NotFound();
@@ -38,20 +43,20 @@ namespace SystemSchool.Server.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody] CreateUsersRequestDto usersDto)
+        public async Task<IActionResult> Create([FromBody] CreateUsersRequestDto usersDto)
         {
             var usersModel = usersDto.ToUsersFromCreateDTO();
-            _context.Users.Add(usersModel);
-            _context.SaveChanges();
+           await _context.Users.AddAsync(usersModel);
+            await _context.SaveChangesAsync();
   
             return CreatedAtAction(nameof(GetById), new { id = usersModel.Id }, usersModel.ToUsersDto());
 
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update([FromRoute] int id, [FromBody] UpdateUsersDto updateDto)
+        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateUsersDto updateDto)
         {
-            var usersModel = _context.Users.FirstOrDefault(x => x.Id == id);
+            var usersModel = await _context.Users.FirstOrDefaultAsync(x => x.Id == id);
 
             if (usersModel == null)
             {
@@ -60,24 +65,29 @@ namespace SystemSchool.Server.Controllers
 
             usersModel.Username = updateDto.Username;
             usersModel.Password = updateDto.Password;
+            await _context.SaveChangesAsync();
             return Ok(usersModel.ToUsersDto());
 
         }
 
         [HttpDelete("{id}")]
 
-        public IActionResult Delete ([FromRoute]int id)
+        public async Task<IActionResult> Delete ([FromRoute]int id)
         {
-            var usersModel = _context.Users.FirstOrDefault(x => x.Id == id);
+            var usersModel = await _context.Users.FirstOrDefaultAsync(x => x.Id == id);
             if(usersModel == null)
             {
                 return NotFound();
             }
-
             _context.Users.Remove(usersModel);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return NoContent();
+
         }
+
 
     }
 }
+
+
+

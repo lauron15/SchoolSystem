@@ -11,11 +11,11 @@ namespace SystemSchool.Server.Models
         [Column("id")]
         public int Id { get; set; }
 
-        [Column("coursename")]
+        [Column("name")]
         public string? Name { get; set; }
 
         [Column("workload")]
-        public string? workload { get; set; }
+        public string? Workload { get; set; }
 
 
 

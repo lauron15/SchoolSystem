@@ -2,7 +2,7 @@
 
 namespace SystemSchool.Server.DTO.ClassesDto
 {
-    public class Classes
+    public class ClassesDto
     {
         public int Id { get; set; }
         public String? Number { get; set; }

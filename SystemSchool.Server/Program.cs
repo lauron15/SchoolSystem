@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using SystemSchool.Server.Data;
+using SystemSchool.Server.Interfaces;
+using SystemSchool.Server.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +28,8 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 //   );
 //});
 
+
+builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 
 var app = builder.Build();
 
