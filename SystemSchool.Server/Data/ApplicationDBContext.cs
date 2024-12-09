@@ -1,14 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using SystemSchool.Server.Models;
 
 
 namespace SystemSchool.Server.Data
 {
-    public class ApplicationDBContext : DbContext
+    public class ApplicationDBContext : IdentityDbContext<Users>
     {
 
         public ApplicationDBContext(DbContextOptions dbContextOptions)
-            : base (dbContextOptions)
+            : base(dbContextOptions)
         {
 
         }
@@ -17,6 +19,31 @@ namespace SystemSchool.Server.Data
         public DbSet<Students> Students { get; set; }
         public DbSet<Courses> Courses { get; set; }
         public DbSet<Classes> Classes { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            List<IdentityRole> roles = new List<IdentityRole>
+            {
+                new IdentityRole
+                {
+Name = "admin",
+NormalizedName = "ADMIN"
+                },
+
+                new IdentityRole
+                {
+Name = "User",
+NormalizedName = "USER"
+                },
+
+            };
+
+            builder.Entity<IdentityRole>().HasData(roles);
+
+        }
+
+
 
 
 

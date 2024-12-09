@@ -11,7 +11,7 @@ namespace SystemSchool.Server.Mappers
             {
                 Id = coursesModel.Id,
                 Name = coursesModel.Name,
-                workload = coursesModel.Workload
+                Workload = coursesModel.Workload
             };
         }
 
@@ -20,7 +20,7 @@ namespace SystemSchool.Server.Mappers
             return new Courses
             {
                 Name = coursesDto.Name,
-                Workload = coursesDto.workload
+                Workload = coursesDto.Workload
             };
         }
     }

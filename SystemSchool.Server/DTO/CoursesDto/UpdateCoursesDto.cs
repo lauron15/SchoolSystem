@@ -3,6 +3,6 @@
     public class UpdateCoursesDto
     {
         public string? Name { get; set; }
-        public string? workload { get; set; }
+        public string? Workload { get; set; }
     }
 }

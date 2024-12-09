@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace SystemSchool.Server.Models
 {
     [Table("users")]
-    public class Users
+    public class Users : IdentityUser
     {
         [Key]
         [Column("id")]

@@ -59,7 +59,7 @@ namespace SystemSchool.Server.Controllers
             }
 
             coursesModel.Name = updateDto.Name;
-            coursesModel.Workload = updateDto.workload;
+            coursesModel.Workload = updateDto.Workload;
             await _context.SaveChangesAsync();
             return Ok(coursesModel.ToCoursesDto());
 

@@ -33,7 +33,7 @@ namespace SystemSchool.Server.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult> GetById([FromRoute] int id)
         {
-            var users = await _context.Users.FindAsync(id);
+            var users = await _usersRepo.GetByIdAsync(id);
             if (users == null)
             {
                 return NotFound();
@@ -46,9 +46,7 @@ namespace SystemSchool.Server.Controllers
         public async Task<IActionResult> Create([FromBody] CreateUsersRequestDto usersDto)
         {
             var usersModel = usersDto.ToUsersFromCreateDTO();
-           await _context.Users.AddAsync(usersModel);
-            await _context.SaveChangesAsync();
-  
+            await _usersRepo.CreateAsync(usersModel);
             return CreatedAtAction(nameof(GetById), new { id = usersModel.Id }, usersModel.ToUsersDto());
 
         }
@@ -56,16 +54,14 @@ namespace SystemSchool.Server.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateUsersDto updateDto)
         {
-            var usersModel = await _context.Users.FirstOrDefaultAsync(x => x.Id == id);
+            var usersModel = await _usersRepo.UpdateAsync(id, updateDto);
 
             if (usersModel == null)
             {
                 return NotFound();
             }
 
-            usersModel.Username = updateDto.Username;
-            usersModel.Password = updateDto.Password;
-            await _context.SaveChangesAsync();
+           
             return Ok(usersModel.ToUsersDto());
 
         }
@@ -74,13 +70,14 @@ namespace SystemSchool.Server.Controllers
 
         public async Task<IActionResult> Delete ([FromRoute]int id)
         {
-            var usersModel = await _context.Users.FirstOrDefaultAsync(x => x.Id == id);
+            var usersModel = await _usersRepo.DeleteAsync(id);
             if(usersModel == null)
             {
                 return NotFound();
             }
-            _context.Users.Remove(usersModel);
-            await _context.SaveChangesAsync();
+          
+
+
             return NoContent();
 
         }

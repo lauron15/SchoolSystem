@@ -6,6 +6,6 @@ namespace SystemSchool.Server.DTO.CoursesDto
     {
         public int Id { get; set; }
         public string? Name { get; set; }
-        public string? workload { get; set; }
+        public string? Workload { get; set; }
     }
 }
