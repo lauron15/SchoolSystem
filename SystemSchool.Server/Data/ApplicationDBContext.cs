@@ -6,7 +6,7 @@ using SystemSchool.Server.Models;
 
 namespace SystemSchool.Server.Data
 {
-    public class ApplicationDBContext : IdentityDbContext<Users>
+    public class ApplicationDBContext : IdentityDbContext<AppUser>
     {
 
         public ApplicationDBContext(DbContextOptions dbContextOptions)

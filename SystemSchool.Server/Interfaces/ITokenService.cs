@@ -4,6 +4,6 @@ namespace SystemSchool.Server.Interfaces
 {
     public interface ITokenService
     {
-        string CreateToken(Users users);
+        string CreateToken(AppUser users);
     }
 }

@@ -17,7 +17,7 @@ namespace SystemSchool.Server.Service
             _config = config;
             _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["JWT:SigningKey"]));
         }
-        public string CreateToken(Users users)
+        public string CreateToken(AppUser users)
         {
             var claims = new List<Claim>
             {

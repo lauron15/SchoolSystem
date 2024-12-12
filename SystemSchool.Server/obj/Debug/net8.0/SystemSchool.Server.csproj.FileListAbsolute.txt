@@ -96,3 +96,7 @@ C:\Users\Laurim\Desktop\SystemSchool\SystemSchool\SystemSchool.Server\obj\Debug\
 C:\Users\Laurim\Desktop\SystemSchool\SystemSchool\SystemSchool.Server\obj\Debug\net8.0\SystemSchool.Server.genruntimeconfig.cache
 C:\Users\Laurim\Desktop\SystemSchool\SystemSchool\SystemSchool.Server\obj\Debug\net8.0\ref\SystemSchool.Server.dll
 C:\Users\Laurim\Desktop\SystemSchool\SystemSchool\SystemSchool.Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Laurim\Desktop\SystemSchool\SystemSchool\SystemSchool.Server\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Laurim\Desktop\SystemSchool\SystemSchool\SystemSchool.Server\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Laurim\Desktop\SystemSchool\SystemSchool\SystemSchool.Server\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Laurim\Desktop\SystemSchool\SystemSchool\SystemSchool.Server\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
